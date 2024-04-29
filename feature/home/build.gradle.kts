@@ -54,6 +54,10 @@ dependencies {
 
     implementation(libs.compose.navigation)
     implementation(libs.compose.hilt.navigation)
+    implementation(libs.androidx.appcompat)
+    implementation(libs.material)
+    implementation(libs.androidx.activity)
+    implementation(libs.androidx.constraintlayout)
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
