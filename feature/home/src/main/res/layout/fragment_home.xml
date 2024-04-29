@@ -6,26 +6,26 @@
 
         <variable
             name="vm"
-            type="com.sample.home.MainViewModel" />
+            type="com.sample.home.HomeViewModel" />
     </data>
 
     <LinearLayout
-        android:id="@+id/main"
+        android:id="@+id/layout_home"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center"
         android:orientation="vertical"
-        tools:context=".MainActivity">
+        tools:context=".HomeFragment">
 
         <TextView
-            android:id="@+id/tv_received_number_main"
+            android:id="@+id/tv_received_number_home"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@{vm.receivedNumber ?? null}"
             android:textSize="70sp" />
 
         <EditText
-            android:id="@+id/et_number_to_give_main"
+            android:id="@+id/et_number_to_give_home"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="50dp"
@@ -36,7 +36,7 @@
             android:textSize="50sp" />
 
         <Button
-            android:id="@+id/btn_navigate_main"
+            android:id="@+id/btn_navigate_home"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="@{(View) -> vm::onClickNavigateButton}"
