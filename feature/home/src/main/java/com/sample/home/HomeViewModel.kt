@@ -7,7 +7,7 @@ class HomeViewModel : ViewModel() {
     val receivedNumber: MutableLiveData<Int> = MutableLiveData()
     val numberToGive: MutableLiveData<String> = MutableLiveData("")
 
-    fun onClickNavigateButton() {
+    val onClickNavigateButton = {
         //TODO
     }
 }

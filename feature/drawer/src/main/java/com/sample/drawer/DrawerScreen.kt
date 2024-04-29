@@ -1,6 +1,5 @@
-package com.sample.auth
+package com.sample.drawer
 
-import android.app.Activity
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
@@ -19,24 +18,19 @@ import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.style.TextAlign
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
-import androidx.navigation.compose.rememberNavController
-import com.haeti.navigation.NavigationUtil
 
 @Composable
-fun AuthScreen(
+fun DrawerScreen(
     modifier: Modifier = Modifier,
     text: String,
     navController: NavController
 ) {
     var data by rememberSaveable { mutableStateOf("") }
-    val context = LocalContext.current
 
     Scaffold() {
         Box(
@@ -60,9 +54,10 @@ fun AuthScreen(
                     placeholder = { Text(text = "힌트") },
                     label = { Text(text = "라벨") },
                     onValueChange = {
-                        data = it
+                        //
                     },
                     singleLine = true,
+                    maxLines = 1,
                     keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Text),
                     modifier = modifier
                         .padding(horizontal = 15.dp, vertical = 20.dp)
@@ -71,7 +66,7 @@ fun AuthScreen(
 
                 Button(
                     onClick = {
-                        (context as NavigationUtil).navigateToDrawer(data)
+                        // 네비게이션
                     },
                     modifier = modifier
                         .fillMaxWidth()
@@ -82,10 +77,4 @@ fun AuthScreen(
             }
         }
     }
-}
-
-@Preview
-@Composable
-private fun preview_AuthScreen() {
-    AuthScreen(Modifier, "text", navController = rememberNavController())
 }

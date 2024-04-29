@@ -39,7 +39,7 @@
             android:id="@+id/btn_navigate_home"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:onClick="@{(View) -> vm::onClickNavigateButton}"
+            android:onClick="@{(View) -> vm.onClickNavigateButton.invoke()}"
             android:text="Navigate"
             android:textSize="30sp" />
 
